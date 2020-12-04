@@ -1,38 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  padding-top: 10vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#background-image {
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  width: 100vw;
+  height: 10vh;
+  background: transparent;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px 15px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+}
+
+.title {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-bar {
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-item {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.hamburger {
+  position: relative;
+  height: 50%;
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  left: 15px;
+  width: 100%;
+  flex-direction: column;
+  background: transparent;
+  height: 15vh;
+  justify-content: space-evenly;
+  overflow: hidden;
+  transition: all 500ms;
+  color: white;
+}
+
+.mobile-nav-hide {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.center {
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 15vh;
+}
+
+#welcome {
+  font-size: 30px;
+  color: white;
+}
+
+#greeting {
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+#tell-me-more {
+  background: #FED136;
+  border: none;
+  margin-top: 20px;
+  padding: 20px 35px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+  .nav-bar {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  .mobile-nav {
+    display: flex;
   }
 }
+
